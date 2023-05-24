@@ -112,8 +112,7 @@ public class PageMain
 
     public String getTextQuestionFour()
     {
-        driver.findElement(answerFour).getText();
-        return questionFourText;
+        return driver.findElement(answerFour).getText();
     }
 
     public void clickButtonFiveQuestion(By questionFive)
@@ -123,8 +122,7 @@ public class PageMain
 
     public String getTextQuestionFive()
     {
-        driver.findElement(answerFive).getText();
-        return questionFiveText;
+        return driver.findElement(answerFive).getText();
     }
 
     public void clickButtonSixQuestion(By questionSix)
@@ -134,8 +132,7 @@ public class PageMain
 
     public String getTextQuestionSix()
     {
-        driver.findElement(answerSix).getText();
-        return questionSixText;
+        return driver.findElement(answerSix).getText();
     }
 
     public void clickButtonSevenQuestion(By questionSeven)
@@ -145,8 +142,7 @@ public class PageMain
 
     public String getTextQuestionSeven()
     {
-        driver.findElement(answerSeven).getText();
-        return questionSevenText;
+        return driver.findElement(answerSeven).getText();
     }
 
     public void clickButtonEightQuestion(By questionEight)
@@ -156,8 +152,7 @@ public class PageMain
 
     public String getTextQuestionEight()
     {
-        driver.findElement(answerEight).getText();
-        return questionEightText;
+        return driver.findElement(answerEight).getText();
     }
 
 }
