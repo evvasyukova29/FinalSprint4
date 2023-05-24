@@ -20,29 +20,25 @@ public class PageMainTestFaq
 {
 
         private WebDriver driver;
-        private static By question;
-        private static By questionText;
-    public PageMainTestFaq(By question,By questionText)
-    {
-        PageMainTestFaq.question = question;
-        PageMainTestFaq.questionText = question;
-    }
 
-    @Parameterized.Parameters // параметризация
-    public static Object[][] getAnswerForQuiestions()
-    {
-        return new Object[][]
-                {
-                        {PageMain.questionOne, PageMain.questionTwoText},
-                        {PageMain.questionTwo, PageMain.questionTwoText},
-                        {PageMain.questionThree, PageMain.questionThreeText},
-                        {PageMain.questionFour, PageMain.questionFourText},
-                        {PageMain.questionFive, PageMain.questionFiveText},
-                        {PageMain.questionSix, PageMain.questionSixText},
-                        {PageMain.questionSeven, PageMain.questionSevenText},
-                        {PageMain.questionEight, PageMain.questionEightText},
-                };
-    }
+    //-----------Текст ответов на вопросы------------------------------------
+    public static String questionOneText = "Сутки — 400 рублей. Оплата курьеру — наличными или картой.";
+    //Текст ответа на вопрос №1
+    public static String questionTwoText = "Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.";
+    //Текст ответа на вопрос №2
+    public static String questionThreeText = "Допустим, вы оформляете заказ на 8 мая. Мы привозим самокат 8 мая в течение дня. Отсчёт времени аренды начинается с момента, когда вы оплатите заказ курьеру. Если мы привезли самокат 8 мая в 20:30, суточная аренда закончится 9 мая в 20:30.";
+    //Текст ответа на вопрос №3
+    public static String questionFourText = "Только начиная с завтрашнего дня. Но скоро станем расторопнее.";
+    //Текст ответа на вопрос №4
+    public static String questionFiveText = "Пока что нет! Но если что-то срочное — всегда можно позвонить в поддержку по красивому номеру 1010.";
+    //Текст ответа на вопрос №5
+    public static String questionSixText = "Самокат приезжает к вам с полной зарядкой. Этого хватает на восемь суток — даже если будете кататься без передышек и во сне. Зарядка не понадобится.";
+    //Текст ответа на вопрос №6
+    public static String questionSevenText = "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои.";
+    //Текст ответа на вопрос №7
+    public static String questionEightText = "Да, обязательно. Всем самокатов! И Москве, и Московской области.";
+    //Текст ответа на вопрос №8
+
         @Before
         public void setUp()
         {
@@ -60,14 +56,14 @@ public class PageMainTestFaq
         {
             PageMain mainPage = new PageMain(driver);
             mainPage.clickButtonOneQuestion(PageMain.questionOne);
-            assertEquals(PageMain.questionOneText, mainPage.getTextQuestionOne());  // сравнить текст
+            assertEquals(questionOneText, mainPage.getTextQuestionOne());  // сравнить текст
         }
 
         @Test
         public void testQuestionTwo() {
             PageMain mainPage = new PageMain(driver);
             mainPage.clickButtonTwoQuestion(PageMain.questionTwo);
-            assertEquals(PageMain.questionTwoText, mainPage.getTextQuestionTwo());  // сравнить текст
+            assertEquals(questionTwoText, mainPage.getTextQuestionTwo());  // сравнить текст
         }
 
         @Test
@@ -75,14 +71,14 @@ public class PageMainTestFaq
         {
             PageMain mainPage = new PageMain(driver);
             mainPage.clickButtonThreeQuestion(PageMain.questionThree);
-            assertEquals(PageMain.questionThreeText, mainPage.getTextQuestionThree());  // сравнить текст
+            assertEquals(questionThreeText, mainPage.getTextQuestionThree());  // сравнить текст
         }
 
         @Test
         public void testQuestionFour() {
             PageMain mainPage = new PageMain(driver);
             mainPage.clickButtonFourQuestion(PageMain.questionFour);
-            assertEquals(PageMain.questionFourText, mainPage.getTextQuestionFour());  // сравнить текст
+            assertEquals(questionFourText, mainPage.getTextQuestionFour());  // сравнить текст
         }
 
         @Test
@@ -90,28 +86,28 @@ public class PageMainTestFaq
         {
             PageMain mainPage = new PageMain(driver);
             mainPage.clickButtonFiveQuestion(PageMain.questionFive);
-            assertEquals(PageMain.questionFiveText, mainPage.getTextQuestionFive());  // сравнить текст
+            assertEquals(questionFiveText, mainPage.getTextQuestionFive());  // сравнить текст
         }
 
         @Test
         public void testQuestionSix() {
             PageMain mainPage = new PageMain(driver);
             mainPage.clickButtonSixQuestion(PageMain.questionSix);
-            assertEquals(PageMain.questionSixText, mainPage.getTextQuestionSix());  // сравнить текст
+            assertEquals(questionSixText, mainPage.getTextQuestionSix());  // сравнить текст
         }
 
         @Test
         public void testQuestionSeven() {
             PageMain mainPage = new PageMain(driver);
             mainPage.clickButtonSevenQuestion(PageMain.questionSeven);
-            assertEquals(PageMain.questionSevenText, mainPage.getTextQuestionSeven());  // сравнить текст
+            assertEquals(questionSevenText, mainPage.getTextQuestionSeven());  // сравнить текст
         }
 
         @Test
         public void testQuestionEight() {
             PageMain mainPage = new PageMain(driver);
             mainPage.clickButtonEightQuestion(PageMain.questionEight);
-            assertEquals(PageMain.questionEightText, mainPage.getTextQuestionEight());  // сравнить текст
+            assertEquals(questionEightText, mainPage.getTextQuestionEight());  // сравнить текст
         }
 
         @After
